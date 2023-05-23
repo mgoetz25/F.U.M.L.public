@@ -1,7 +1,7 @@
 # F.U.M.L.
 F.U.M.L. (F.U.M.L. Uses Machine Learning) proposes a machine-learning-driven solution to accelerate the process of entering forms into a database.
 
-(originally published Decemeber 6th, 2021)
+(originally published December 6th, 2021)
 
 ## Branch Structure
 There are two branches that live forever: main and dev.
