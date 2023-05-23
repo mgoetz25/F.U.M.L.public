@@ -1,0 +1,30 @@
+# This file outlines what the basic structure of the website should be. It goes over the basic functionality each page should have.
+# Includes pseudocode for certain aspects of the website.
+
+/homepage
+# homepage will first prioritize an area where users can upload their pdf file
+# upon using the upload option, user will be informed their file is being uploaded to the backend server
+# logo on website should re-direct here
+  -> upload pdf
+  # leads to a "loading" page, during this the file will first be checked if it is actually a pdf before being sent over
+  # possible limit on pdf memory size and physical size based on metadata, as well as page numbers
+/result
+  -> download pdf
+  #user will be able to download their scanned pdf after it is sent back
+  -> pdf unable to be scanned
+  # informs user their scanned file is either not a pdf or no fields could be located
+/pagenotfound
+  -> return to homepage
+  # basic requirement for websites to ensure users don't get lost
+
+/about
+# features information on how the website works
+  -> return to homepage
+
+(lower priority)
+/login
+# will use an sql database to save the login details of users and an aes encryption to keep user information safe
+  -> sign in
+  # user can sign in with their credentials of a username and password
+  -> create account
+  # user can create an account using a username, password, and e-mail (e-mail verification)

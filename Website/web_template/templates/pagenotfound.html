@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="megakit,business,company,agency,multipurpose,modern,bootstrap4">
+
+
+  <title>F.U.M.L</title>
+
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Icon Font Css -->
+  <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
+  <link rel="stylesheet" href="plugins/fontawesome/css/all.css">
+  <link rel="stylesheet" href="plugins/magnific-popup/dist/magnific-popup.css">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+	<link rel="icon" type="static/images/png" href="static/images/favicon.ico">
+
+</head>
+
+<body style="background-color: #000000">
+
+<!-- Header Start -->
+
+<header class="navigation" style="background-color: #FFFFFF">
+	<!-- <div class="header-top ">
+		<div class="container">
+			<div class="row justify-content-between align-items-center">
+				<div class="col-lg-2 col-md-4">
+					<div class="header-top-socials text-center text-lg-left text-md-left">
+						<a href="#" target="_blank"><i class="ti-facebook"></i></a>
+						<a href="#" target="_blank"><i class="ti-twitter"></i></a>
+						<a href="#" target="_blank"><i class="ti-github"></i></a>
+					</div>
+				</div>
+				<div class="col-lg-10 col-md-8 text-center text-lg-right text-md-right">
+					<div class="header-top-info">
+						<a href="tel:+23-345-67890">Call Us : <span>+23-345-67890</span></a>
+						<a href="mailto:support@gmail.com" ><i class="fa fa-envelope mr-2"></i><span>support@gmail.com</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<nav class="navbar navbar-expand-lg bg-white navbar-light py-4" id="navbar">
+		<div class="container">
+		  <a class="navbar-brand" href="/">
+		  	F.U.M.L
+		  </a>
+
+		  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="fa fa-bars"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse text-center" id="navbarsExample09">
+			<ul class="navbar-nav ">
+				<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+
+			   <li class="text-dark nav-item"><a class=" nav-link" href="/about">About</a></li>
+
+			{% if not session['logged_in'] %}
+				<a class="nav-link" href="/signup">Signup</a>
+			{% else %}
+            	<a class="nav-link" href="/settings">Settings<span class="sr-only"></span></a>
+			{% endif %}
+
+			{% if not session['logged_in'] %}
+				<a href='/login' class="text-white nav-link btn btn-primary" style=" right: 3%;">Login</a>
+			{% else %}
+				<a href='/logout' class="text-white nav-link btn btn-danger" style="right: 3%;">Logout</a>
+			{% endif %}
+				</ul>
+		  </div>
+		</div>
+	</nav>
+</header>
+
+
+    <div>
+    <h1 class="text-white text-center">PAGE NOT FOUND</h1>
+        <h5 class="text-center">{{msg}}</h5>
+    </div>
+    <!-- Footer -->
+    <div>
+        <footer style="background: black;" class="page-footer font-small blue">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2021 Copyright:
+            <a href="/about">This site</a>
+        </div>
+        <!-- Copyright -->
+        </footer>
+    </div>
+<!-- Footer -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

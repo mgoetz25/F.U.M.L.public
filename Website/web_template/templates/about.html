@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="megakit,business,company,agency,multipurpose,modern,bootstrap4">
+
+
+  <title>F.U.M.L</title>
+
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Icon Font Css -->
+  <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
+  <link rel="stylesheet" href="plugins/fontawesome/css/all.css">
+  <link rel="stylesheet" href="plugins/magnific-popup/dist/magnific-popup.css">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+	<link rel="icon" type="static/images/png" href="static/images/favicon.ico">
+
+</head>
+
+<body style="background-color: #000000">
+
+<!-- Header Start -->
+
+<header class="navigation" style="background-color: #FFFFFF">
+	<!-- <div class="header-top ">
+		<div class="container">
+			<div class="row justify-content-between align-items-center">
+				<div class="col-lg-2 col-md-4">
+					<div class="header-top-socials text-center text-lg-left text-md-left">
+						<a href="#" target="_blank"><i class="ti-facebook"></i></a>
+						<a href="#" target="_blank"><i class="ti-twitter"></i></a>
+						<a href="#" target="_blank"><i class="ti-github"></i></a>
+					</div>
+				</div>
+				<div class="col-lg-10 col-md-8 text-center text-lg-right text-md-right">
+					<div class="header-top-info">
+						<a href="tel:+23-345-67890">Call Us : <span>+23-345-67890</span></a>
+						<a href="mailto:support@gmail.com" ><i class="fa fa-envelope mr-2"></i><span>support@gmail.com</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<nav class="navbar navbar-expand-lg bg-white navbar-light py-4" id="navbar">
+		<div class="container">
+		  <a class="navbar-brand" href="/">
+		  	F.U.M.L
+		  </a>
+
+		  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="fa fa-bars"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse text-center" id="navbarsExample09">
+			<ul class="navbar-nav ">
+
+				<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+
+				<li class="nav-item active">
+			   <a class="text-dark nav-item"><a class="nav-link" href="/about">About</a></a>
+				</li>
+			{% if not session['logged_in'] %}
+				<a class="nav-link" href="/signup">Signup</a>
+			{% else %}
+            	<a class="nav-link" href="/settings">Settings<span class="sr-only"></span></a>
+			{% endif %}
+
+			{% if not session['logged_in'] %}
+				<a href='/login' class="text-white nav-link btn btn-primary" style=" right: 3%;">Login</a>
+			{% else %}
+				<a href='/logout' class="text-white nav-link btn btn-danger" style="right: 3%;">Logout</a>
+			{% endif %}
+				</ul>
+		  </div>
+		</div>
+	</nav>
+</header>
+
+<!-- Header Close -->
+
+<div class="main-wrapper">
+
+
+
+<!-- Section About Start -->
+<section class="section about-2 position-relative">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6" style="color: #fff">
+				<div class="about-item pr-3 mb-5 mb-lg-0" style="padding-bottom:15px; font-size: large">
+					<span class="h6 text-primary" style="font-size: 60px">What we are</span>
+					<h2 class="mt-3 mb-4 position-relative content-title" style="color: #fff">We are dynamic team of creative people</h2>
+					<p class="mb-5">F.U.M.L. (F.U.M.L. Uses Machine Learning) proposes a machine-learning-driven solution to accelerate the process of entering forms into a database.</p>
+
+					<a href="https://github.com/mrf7777/F.U.M.L." class="btn btn-primary" target="_blank">Github</a>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<div class="about-item-img">
+					<!--<img src="static/images/home-7.jpg" alt="" class="img-fluid">-->
+				</div>
+			</div>
+			<aside class="socialNetworkNavBar" style="padding-top:30px;">
+				<div class="socialNetworkNav" style="width: 165px;height: 165px;display: inline-block;margin-right: 23px;">
+				  <!-- Add a Anchor tag with nested img tag here -->
+				  <img src="static/images/brooks.jpg" class="img-fluid img-thumbnail rounded-circle w-50" style="float: left / right" alt="Trevor Brooks">
+					<div><h5 class="text-white mr-4" syle="font-family: sans-serif;color: white;font-size: 18px;font-weight: 700;">Trevor Brooks</h5></div>
+				</div>
+
+				<div class="socialNetworkNav" style="width: 165px;height: 165px;display: inline-block;margin-right: 23px;">
+				  <!-- Add a Anchor tag with nested img tag here -->
+				  <img class="img-fluid img-thumbnail rounded-circle w-50 p-2" src="static/images/sample_thumbnail.png"  alt="sample">
+					<div><h5 class="text-white mr-2" syle="font-family: sans-serif;color: white;font-size: 18px;font-weight: 700;">Michael Fulghum</h5></div>
+				</div>
+				<div class="socialNetworkNav" style="width: 165px;height: 165px;display: inline-block;margin-right: 23px;">
+				  <img src="static/images/goetz.jpg" class="img-fluid img-thumbnail rounded-circle w-50" style="float: left / right" alt="Michael Goetz">
+					<div><h5 class="text-white mr-4" syle="font-family: sans-serif;color: white;font-size: 18px;font-weight: 700;">Michael Goetz</h5></div>
+				</div>
+				<div class="socialNetworkNav" style="width: 165px;height: 165px;display: inline-block;margin-right: 23px;">
+				  <!-- Add a Anchor tag with nested img tag here -->
+				  <img class="img-fluid img-thumbnail rounded-circle w-50 p-2" src="static/images/sample_thumbnail.png"  alt="sample">
+					<div><h5 class="text-white mr-4" syle="font-family: sans-serif;color: white;font-size: 18px;font-weight: 700;">Felix Potter</h5></div>
+				</div>
+				<div class="socialNetworkNav" style="width: 165px;height: 165px;display: inline-block;margin-right: 23px;">
+				  <!-- Add a Anchor tag with nested img tag here -->
+				  <img class="img-fluid img-thumbnail rounded-circle w-50 p-2" src="static/images/sample_thumbnail.png"  alt="sample">
+				<div><h5 class="text-white mr-4" syle="font-family: sans-serif;color: white;font-size: 18px;font-weight: 700;">David de Sousa</h5></div>
+				</div>
+			</aside>
+		</div>
+	</div>
+</section>
+
+<!-- Section About End -->
+
+<section class="about-info section pt-0" style="color: #fff">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="about-info-item mb-4 mb-lg-0">
+					<h3 class="mb-3" style="color: #fff"><span class="text-primary">01.</span> Our Mission</h3>
+					<p>Existing fillable PDF conversion tools are sparse, expensive, and hard to use. We want to change this so that users of all kinds can access digital forms easily.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="about-info-item mb-4 mb-lg-0">
+					<h3 class="mb-3" style="color: #fff"><span class="text-primary">02.</span> Vision</h3>
+					<p>Our software seeks to alleviate reliance on paper forms by enabling access to an easy-to-use solution that is accurate and free.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="about-info-item mb-4 mb-lg-0">
+					<h3 class="mb-3" style="color: #fff"><span class="text-primary">03.</span> Our Approach</h3>
+					<p>Through a lightweight and free web app, we enable high compatibility and accessibility for users to use our machine-learning based PDF fillable form creation.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<!-- footer Start -->
+<footer class="text-white footer section">
+	<div class="container">
+
+
+		<div class="footer-btm pt-4">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="copyright">
+						&copy; 2021 Copyright - All Rights Reserved
+					</div>
+				</div>
+				<div class="col-lg-6 text-left text-lg-right">
+					<p style="font-weight: bold;">F.U.M.L - <a href="/about" style="font-weight: bold;color: #1565C0">About Us</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+    </div>
+
+    <!--
+    Essential Scripts
+    =====================================-->
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- Main jQuery -->
+    <script src="js/contact.js"></script>
+    <!-- Bootstrap 4.0.0 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <!--  Magnific Popup-->
+    <script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+    <!-- Counterup -->
+    <script src="plugins/counterup/jquery.waypoints.min.js"></script>
+    <script src="plugins/counterup/jquery.counterup.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+  </body>
+  </html>

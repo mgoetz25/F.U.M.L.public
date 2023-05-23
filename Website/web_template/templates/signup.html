@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="megakit,business,company,agency,multipurpose,modern,bootstrap4">
+
+
+  <title>F.U.M.L</title>
+
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Icon Font Css -->
+  <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
+  <link rel="stylesheet" href="plugins/fontawesome/css/all.css">
+  <link rel="stylesheet" href="plugins/magnific-popup/dist/magnific-popup.css">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="static/images/png" href="static/images/favicon.ico">
+
+</head>
+
+<body style="background-color: #000000">
+
+<!-- Header Start -->
+
+<header class="navigation" style="background-color: #FFFFFF">
+	<!-- <div class="header-top ">
+		<div class="container">
+			<div class="row justify-content-between align-items-center">
+				<div class="col-lg-2 col-md-4">
+					<div class="header-top-socials text-center text-lg-left text-md-left">
+						<a href="#" target="_blank"><i class="ti-facebook"></i></a>
+						<a href="#" target="_blank"><i class="ti-twitter"></i></a>
+						<a href="#" target="_blank"><i class="ti-github"></i></a>
+					</div>
+				</div>
+				<div class="col-lg-10 col-md-8 text-center text-lg-right text-md-right">
+					<div class="header-top-info">
+						<a href="tel:+23-345-67890">Call Us : <span>+23-345-67890</span></a>
+						<a href="mailto:support@gmail.com" ><i class="fa fa-envelope mr-2"></i><span>support@gmail.com</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<nav class="navbar navbar-expand-lg bg-white navbar-light py-4" id="navbar">
+		<div class="container">
+		  <a class="navbar-brand" href="/">
+		  	F.U.M.L
+		  </a>
+
+		  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="fa fa-bars"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse text-center" id="navbarsExample09">
+			<ul class="navbar-nav ">
+				<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+
+			   <a class="text-dark nav-item"><a class="nav-link" href="/about">About</a></a>
+
+			{% if not session['logged_in'] %}
+                <li class="nav-item active">
+				<a class="nav-link" href="/signup">Signup</a>
+                    </li>
+			{% else %}
+            	<a class="nav-link" href="/settings">Settings<span class="sr-only"></span></a>
+			{% endif %}
+
+			{% if not session['logged_in'] %}
+				<a href='/login' class="text-white nav-link btn btn-primary" style=" right: 3%;">Login</a>
+			{% else %}
+				<a href='/logout' class="text-white nav-link btn btn-danger" style="right: 3%;">Logout</a>
+			{% endif %}
+				</ul>
+		  </div>
+		</div>
+	</nav>
+</header>
+<div class="main-wrapper " style="background-color: #000000">
+  <section class="contact-form-wrap section">
+    <div class="card mx-auto m-2" style="width:70%">
+      <form action="{{url_for('adduser')}}" method="POST" style="border:1px solid #ccc">
+      <div class="container bg-white">
+      <div class="row bg-light text-center">
+      <div class="col-12">
+       <h1 style="text-align:center;color:black">Sign Up</h1>
+      </div>
+      </div>
+      <p>Please fill in this form to create an account.</p>
+        {% for m in message %}
+            {{m}}<br>
+        {% endfor %}
+        <hr>
+
+        <div class="col-12">
+          <label for="unm"><b>Username</b></label>
+          <input type="text" class="form-control" placeholder="Enter Username" name="usr" id="unm" required>
+        </div>
+        <div class="col-12">
+          <label for="enm"><b>Email </b></label>
+          <input type="text" class="form-control" placeholder="email@xyz.com" name="email" id="enm" required>
+        </div>
+        <div class="col-12">
+          <label for="psd"><b>Password </b></label>
+          <input type="password" class="form-control" placeholder="Enter Password" name="psw" id="psd" required>
+        </div>
+        <div class="col-12">
+          <label for="psd"><b>Re-enter Password </b></label>
+          <input type="password" class="form-control" placeholder="Re-enter Password" name="repsw" id="repsd" required>
+        </div>
+        <p class="m-1">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.
+        </p>
+      </div>
+      <div class="container bg-white">
+        <div class="row justify-center">
+          <button type="submit" class="col-12 col-md-5 m-1 signupbtn btn btn-primary btn-block btn-lg" id="btnSignup"
+            name="btnSignup"><b>Sign Up</b></button>
+        </div>
+      </div>
+    </form>
+  </div>
+    <!-- Footer -->
+    <div>
+    </div>
+  </section>
+    <footer style="background: black;" class="text-white page-footer font-small blue">
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2021 Copyright:
+        <p style="font-weight: bold;">F.U.M.L - <a href="/about" style="font-weight: bold;color: #1565C0">About Us</a></p>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </div>
+  <!-- Footer -->
+    <!--
+    Essential Scripts
+    =====================================-->
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- Main jQuery -->
+    <script src="js/contact.js"></script>
+    <!-- Bootstrap 4.0.0 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <!--  Magnific Popup-->
+    <script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+    <!-- Counterup -->
+    <script src="plugins/counterup/jquery.waypoints.min.js"></script>
+    <script src="plugins/counterup/jquery.counterup.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+  </body>
+  </html>
