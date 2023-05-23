@@ -1,0 +1,30 @@
+# Put python requirements here.
+# See https://pip.pypa.io/en/stable/user_guide/#requirements-files to learn about requirement files and how pip uses them.
+# See https://pip.pypa.io/en/stable/cli/pip_install/#requirements-file-format to learn about the requirements file format.
+#
+# If the requirements in this file conflict with other python packages that are installed globally on your machine, create a
+#     virtual python environment (VE). PyCharm does this by default for new projects I think. A VE can be made manually though.
+
+# for OpenCV
+numpy~=1.21.2
+matplotlib~=3.4.3
+opencv-python~=4.5.3.56
+
+# for PDF creation, conversion, editing, etc.
+# use "import fitz" to use
+PyMuPDF
+
+# for detecting checkboxes and character boxes.
+boxdetect~=1.0.0
+
+# for fuml/make_fillable.py
+reportlab~=3.6.3
+PyPDF2~=1.26.0
+
+# for website
+flask~=2.0.2
+flask_mail
+pycryptodomex
+fitz~=0.0.1.dev2
+Werkzeug~=2.0.2
+website~=1.1
